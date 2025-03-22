@@ -1,0 +1,1238 @@
+{
+	"info": {
+		"_postman_id": "de92ab6d-db4f-4109-b05c-3f97f0fb7f15",
+		"name": "User Role Management APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27168335"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"hemil\",\n    \"lastName\": \"modi\",\n    \"email\": \"hemil121@gmail.com\",\n    \"password\": \"password123\",\n    \"role\": \"67deb4eb286c36c298fd9b7f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"hemil\",\n    \"lastName\": \"modi\",\n    \"email\": \"hemil@gmail.com\",\n    \"password\": \"password123\",\n    \"role\": \"67deb4eb286c36c298fd9b7f\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-nMoFx54+czTntmSLXl3mqIsZV4A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 13:29:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"email\": \"hemil@gmail.com\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"email\": \"hemil@gmail.com\",\n    \"password\": \"password123\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-1UgS/HPEhe1ZuyPMubsvMSB0Nmo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 13:29:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2RlYmIyOWRjNmViMzRkODc0ODQ0ZGEiLCJyb2xlIjoidmlld2VyIiwiaWF0IjoxNzQyNjUwMTcwLCJleHAiOjE3NDI2NTM3NzB9.nYxJru8btFzb27i84nJEs63pfPgXVDcvH6SkTsVl67k\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get All Roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Roles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/roles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"roles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "470"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d6-BoJGM3Eb5BPNMgSBTAzXc0CBboU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 13:05:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"67deb03396b08ca9dd8c0fb1\",\n        \"roleName\": \"admin\",\n        \"accessModules\": [\n            \"users\",\n            \"roles\",\n            \"dashboard\"\n        ],\n        \"active\": true,\n        \"createdAt\": \"2025-03-22T12:42:27.937Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67deb4dd286c36c298fd9b7d\",\n        \"roleName\": \"user\",\n        \"accessModules\": [\n            \"users\",\n            \"dashboard\"\n        ],\n        \"active\": true,\n        \"createdAt\": \"2025-03-22T13:02:21.928Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67deb4eb286c36c298fd9b7f\",\n        \"roleName\": \"viewer\",\n        \"accessModules\": [\n            \"dashboard\",\n            \"reports\"\n        ],\n        \"active\": true,\n        \"createdAt\": \"2025-03-22T13:02:35.099Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Role ID by Role Name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/roles/67deb03396b08ca9dd8c0fb1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"roles",
+								"67deb03396b08ca9dd8c0fb1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Role ID by Role Name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/roles/67deb03396b08ca9dd8c0fb1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"roles",
+										"67deb03396b08ca9dd8c0fb1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a0-jLRdAKSwpYChi96BFrV/0YNGz0U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 12:57:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67deb03396b08ca9dd8c0fb1\",\n    \"roleName\": \"admin\",\n    \"accessModules\": [\n        \"users\",\n        \"roles\",\n        \"dashboard\"\n    ],\n    \"active\": true,\n    \"createdAt\": \"2025-03-22T12:42:27.937Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accessModules\": [\"dashboard\", \"reports\"]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/roles/{{ROLE_ID}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"roles",
+								"{{ROLE_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Role",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"accessModules\": [\"dashboard\", \"reports\"]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/roles/{{ROLE_ID}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"roles",
+										"{{ROLE_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9b-p97XOL5JoQ7P7E7Z5ANe6lOs66I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 13:03:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67deb4eb286c36c298fd9b7f\",\n    \"roleName\": \"viewer\",\n    \"accessModules\": [\n        \"dashboard\",\n        \"reports\"\n    ],\n    \"active\": true,\n    \"createdAt\": \"2025-03-22T13:02:35.099Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"roleName\": \"guest\",\n  \"accessModules\": [\"reports\"]\n}\n\n// 0\n// \"users\"\n// 1\n// \"roles\"\n// 2\n// \"dashboard\"\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/roles/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"roles",
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Role",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"roleName\": \"guest\",\n  \"accessModules\": [\"reports\"]\n}\n\n// 0\n// \"users\"\n// 1\n// \"roles\"\n// 2\n// \"dashboard\"\n"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/roles/roles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"roles",
+										"roles"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8e-4uZEssvIqqsQ+TPJblPGYzDqrsk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 13:04:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"roleName\": \"guest\",\n    \"accessModules\": [\n        \"reports\"\n    ],\n    \"active\": true,\n    \"_id\": \"67deb54db30e3ca9e61b2ee5\",\n    \"createdAt\": \"2025-03-22T13:04:13.389Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/roles/{{ROLE_ID}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"roles",
+								"{{ROLE_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Role",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/roles/{{ROLE_ID}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"roles",
+										"{{ROLE_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-ubQu1fSPBtIEgZjlh4N3G6Aqn1w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 13:05:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Role deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:3000/api/users\" \\\n     -H \"Authorization: Bearer {{token}}\"\n"
+					},
+					"response": [
+						{
+							"name": "Get all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "623"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26f-sE9VSps2dQZuhY2jF+InyQv9u+c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 19:49:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": [\n        {\n            \"_id\": \"67deb30a96b08ca9dd8c0fb7\",\n            \"firstName\": \"jack\",\n            \"lastName\": \"jack\",\n            \"email\": \"jack@gmail.com\",\n            \"role\": {\n                \"_id\": \"67deb03396b08ca9dd8c0fb1\",\n                \"roleName\": \"admin\",\n                \"accessModules\": [\n                    \"users\",\n                    \"roles\",\n                    \"dashboard\"\n                ]\n            },\n            \"createdAt\": \"2025-03-22T12:54:34.491Z\",\n            \"updatedAt\": \"2025-03-22T12:54:34.491Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67debb29dc6eb34d874844da\",\n            \"firstName\": \"hemil\",\n            \"lastName\": \"modi\",\n            \"email\": \"hemil@gmail.com\",\n            \"role\": {\n                \"_id\": \"67deb03396b08ca9dd8c0fb1\",\n                \"roleName\": \"admin\",\n                \"accessModules\": [\n                    \"users\",\n                    \"roles\",\n                    \"dashboard\"\n                ]\n            },\n            \"createdAt\": \"2025-03-22T13:29:13.393Z\",\n            \"updatedAt\": \"2025-03-22T13:29:13.393Z\",\n            \"__v\": 0\n        }\n    ],\n    \"total\": 2,\n    \"page\": 1,\n    \"limit\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "Get user by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"{{userId}}"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:3000/api/users/{{userId}}\" \\\n     -H \"Authorization: Bearer {{token}}\"\n"
+					},
+					"response": [
+						{
+							"name": "Get user by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users/{{userId}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"{{userId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15e-SO5SjmtINWJpIThNOBYpWGtHQm4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 19:51:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67deb30a96b08ca9dd8c0fb7\",\n    \"firstName\": \"jack\",\n    \"lastName\": \"jack\",\n    \"email\": \"jack@gmail.com\",\n    \"role\": {\n        \"_id\": \"67deb03396b08ca9dd8c0fb1\",\n        \"roleName\": \"admin\",\n        \"accessModules\": [\n            \"users\",\n            \"roles\",\n            \"dashboard\"\n        ],\n        \"active\": true,\n        \"createdAt\": \"2025-03-22T12:42:27.937Z\",\n        \"__v\": 0\n    },\n    \"createdAt\": \"2025-03-22T12:54:34.491Z\",\n    \"updatedAt\": \"2025-03-22T12:54:34.491Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"{{userId}}"
+							]
+						},
+						"description": "Generated from cURL: curl -X DELETE \"http://localhost:3000/api/users/{{userId}}\" \\\n     -H \"Authorization: Bearer {{token}}\"\n"
+					},
+					"response": [
+						{
+							"name": "delete user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users/{{userId}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"{{userId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 19:53:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n           \"firstName\": \"hemil\",\n           \"lastName\": \"modi\"\n         }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"{{userId}}"
+							]
+						},
+						"description": "Generated from cURL: curl -X PATCH http://localhost:3000/users/{userId} \\\n     -H \"Content-Type: application/json\" \\\n     -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\\n     -d '{\n           \"firstName\": \"UpdatedFirstName\",\n           \"lastName\": \"UpdatedLastName\",\n           \"email\": \"updatedemail@example.com\"\n         }'\n"
+					},
+					"response": [
+						{
+							"name": "Update user",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n           \"firstName\": \"hemil\",\n           \"lastName\": \"modi\"\n         }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/{{userId}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"{{userId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "339"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"153-ZLxcwQOqzDRIQdKBZnNu9f461yU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 20:06:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User updated successfully\",\n    \"user\": {\n        \"_id\": \"67debb29dc6eb34d874844da\",\n        \"firstName\": \"hemil\",\n        \"lastName\": \"modi\",\n        \"email\": \"hemil@gmail.com\",\n        \"password\": \"$2a$10$e8lk4yWX4I8MG6.FXrE4Ze1cwZdJhab8sHOQR6sAGVmLOlYXFcv9m\",\n        \"role\": \"67deb03396b08ca9dd8c0fb1\",\n        \"createdAt\": \"2025-03-22T13:29:13.393Z\",\n        \"updatedAt\": \"2025-03-22T20:06:33.357Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Bulk update users",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n           \"updateData\": { \"firstName\": \"hml\" }\n         }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/bulk-update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"bulk-update"
+							]
+						},
+						"description": "Generated from cURL: curl -X PUT \"http://localhost:3000/api/users/bulk-update\" \\\n     -H \"Authorization: Bearer {{token}}\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n           \"filter\": { \"role\": \"user\" },\n           \"updateData\": { \"status\": \"active\" }\n         }'\n"
+					},
+					"response": [
+						{
+							"name": "Bulk update users",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n           \"updateData\": { \"firstName\": \"hml\" }\n         }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/bulk-update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"bulk-update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8e-EFL1jK9JwUS9zkhdL29WZ1yoMJA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Mar 2025 19:59:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Users updated successfully\",\n    \"result\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 5,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 5\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
