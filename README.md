@@ -1,10 +1,10 @@
-API for Managing Users 
+# API for Managing Users 
 
-Summary 
+# Summary 
 
 This project incorporates authentication along with user and role management. It offers a safe and scalable method to handle users and their roles, facilitating role-based access control (RBAC) for various modules. 
 
-Attributes 
+# Attributes 
 
 User verification and access control 
 
@@ -16,54 +16,48 @@ Mass update for users
 
 Page navigation and search features 
 
-Technologies Employed 
+# Technologies Employed 
 
-Node.js 
+Node.js ,Express.js ,Mongoose with MongoDB ,JWT Authentication 
 
-Express.js 
+# Setup 
 
-Mongoose with MongoDB 
+        npm install 
 
-JWT Authentication 
+        npm run start 
 
-Setup 
-
-npm install 
-
-npm run start 
-
-API Access Points 
+# API Access Points 
 
 Verification 
 
-POST /login - Authenticate user 
+        POST /login - Authenticate user 
 
-POST /register - Creating a user account 
+        POST /register - Creating a user account 
 
 Management of Users 
 
-GET /users - Retrieve all users (includes pagination and search capabilities) 
+        GET /users - Retrieve all users (includes pagination and search capabilities) 
 
-FETCH /users/:userId - Retrieve user by ID 
+        FETCH /users/:userId - Retrieve user by ID 
 
-PATCH /users/:userId - Modify user information 
+        PATCH /users/:userId - Modify user information 
 
-REMOVE /users/:userId - Eliminate user 
+        REMOVE /users/:userId - Eliminate user 
 
         PUT /users/bulk-modify - Update multiple users at once 
 
 
 Management of Roles 
 
-POST /roles - Add a new role 
+        POST /roles - Add a new role 
 
-FETCH /roles - Retrieve all roles 
+        FETCH /roles - Retrieve all roles 
 
-FETCH /roles/:roleId - Retrieve role using ID 
+        FETCH /roles/:roleId - Retrieve role using ID 
 
-PATCH /roles/:roleId - Modify role 
+        PATCH /roles/:roleId - Modify role 
 
-REMOVE /roles/:roleId - Remove role 
+        REMOVE /roles/:roleId - Remove role 
 
-GET /roles/:roleId - Verify user authorization for a module 
+        GET /roles/:roleId - Verify user authorization for a module 
 # Rbac
